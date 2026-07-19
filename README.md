@@ -98,4 +98,5 @@ Until that variable is set, `/contact` shows email fallback only.
 - Contact form + Vercel Analytics/Speed Insights: complete
 - SEO basics (sitemap, robots, OG, JSON-LD): complete
 - HTML résumé page: complete (PDF asset pending)
-- Remaining: About/Now/Toolbox content, privacy copy polish
+- About page: complete
+- Remaining: Now/Toolbox/Kind Words content, privacy copy polish

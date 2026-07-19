@@ -152,3 +152,17 @@ test("resume page renders HTML résumé content", async ({ page }) => {
   await expect(page.getByText("The Smart Cube / WNS")).toBeVisible();
   await expect(page.getByRole("link", { name: /SmartRisk/i })).toBeVisible();
 });
+
+test("about page renders professional story sections", async ({ page }) => {
+  await page.goto("/about");
+
+  await expect(
+    page.getByRole("heading", { name: "Frontend leadership with production judgment" }),
+  ).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Career shape" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "How I work" })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "Leadership", exact: true }),
+  ).toBeVisible();
+  await expect(page.getByText("The Smart Cube / WNS")).toBeVisible();
+});
