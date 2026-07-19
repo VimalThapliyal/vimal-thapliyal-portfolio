@@ -99,4 +99,5 @@ Until that variable is set, `/contact` shows email fallback only.
 - SEO basics (sitemap, robots, OG, JSON-LD): complete
 - HTML résumé page: complete (PDF asset pending)
 - About page: complete
-- Remaining: Now/Toolbox/Kind Words content, privacy copy polish
+- Privacy page: complete
+- Remaining: Now/Toolbox/Kind Words content
