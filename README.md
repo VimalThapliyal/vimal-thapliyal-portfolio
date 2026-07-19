@@ -101,4 +101,5 @@ Until that variable is set, `/contact` shows email fallback only.
 - About page: complete
 - Privacy page: complete
 - Now page: complete
-- Remaining: Toolbox/Kind Words content
+- Toolbox page: complete
+- Remaining: Kind Words (only with approved quotes)

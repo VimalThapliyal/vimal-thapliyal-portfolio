@@ -187,3 +187,14 @@ test("now page renders current focus sections", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Availability" })).toBeVisible();
   await expect(page.getByText("Open to relevant conversations").first()).toBeVisible();
 });
+
+test("toolbox page catalogues tools by category", async ({ page }) => {
+  await page.goto("/toolbox");
+
+  await expect(page.getByRole("heading", { name: "Toolbox", exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Featured" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Frontend", exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Data visualization" })).toBeVisible();
+  await expect(page.getByRole("link", { name: /^React/ }).first()).toBeVisible();
+  await expect(page.getByRole("link", { name: /^amCharts/ }).first()).toBeVisible();
+});
