@@ -176,3 +176,14 @@ test("privacy page documents contact and analytics handling", async ({ page }) =
   await expect(page.getByRole("link", { name: /Formspree privacy policy/i })).toBeVisible();
   await expect(page.getByRole("link", { name: "vimalmern126@gmail.com" })).toBeVisible();
 });
+
+test("now page renders current focus sections", async ({ page }) => {
+  await page.goto("/now");
+
+  await expect(page.getByRole("heading", { name: "Now", exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Working on" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Learning" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Writing", exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Availability" })).toBeVisible();
+  await expect(page.getByText("Open to relevant conversations").first()).toBeVisible();
+});

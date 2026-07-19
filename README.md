@@ -100,4 +100,5 @@ Until that variable is set, `/contact` shows email fallback only.
 - HTML résumé page: complete (PDF asset pending)
 - About page: complete
 - Privacy page: complete
-- Remaining: Now/Toolbox/Kind Words content
+- Now page: complete
+- Remaining: Toolbox/Kind Words content
