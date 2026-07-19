@@ -36,7 +36,7 @@ function isInternalHref(href: string) {
 export function Button(props: ButtonProps) {
   const { variant = "primary", className, children, ...rest } = props;
   const classes = cn(
-    "inline-flex min-h-11 items-center justify-center gap-2 rounded-[var(--radius-sm)] px-4 text-[length:var(--text-small)] font-medium no-underline transition-colors duration-[var(--duration-fast)] ease-[var(--ease-standard)]",
+    "inline-flex min-h-11 items-center justify-center gap-2 rounded-[var(--radius-sm)] px-4 text-[length:var(--text-small)] font-medium no-underline transition-colors duration-[var(--duration-fast)] ease-[var(--ease-standard)] disabled:cursor-not-allowed disabled:opacity-60",
     variantClasses[variant],
     className,
   );

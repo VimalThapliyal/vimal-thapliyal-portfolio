@@ -192,10 +192,13 @@ html[data-theme="dark"] {
     display: none !important;
   }
 
-  .recruiter-page {
+  .recruiter-page,
+  .resume-page {
     animation: none !important;
   }
 
+  .resume-page a[href^="http"]::after,
+  .resume-page a[href^="mailto:"]::after,
   .recruiter-page a[href^="http"]::after,
   .recruiter-page a[href^="mailto:"]::after {
     content: " (" attr(href) ")";
