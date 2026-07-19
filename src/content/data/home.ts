@@ -10,7 +10,7 @@ export const homeContent = {
     primaryCta: { label: "View selected work", href: "/work" },
     secondaryCta: { label: "Recruiter Mode", href: "/recruiter" },
     utilityCta: {
-      label: "Download résumé",
+      label: "View résumé",
       href: "/resume",
     },
   },

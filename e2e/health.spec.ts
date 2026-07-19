@@ -24,7 +24,7 @@ test("homepage exposes positioning and primary CTAs", async ({ page }) => {
   await expect(page.getByText("11+ years").first()).toBeVisible();
   await expect(page.getByRole("link", { name: "View selected work" })).toBeVisible();
   await expect(page.getByRole("link", { name: "Recruiter Mode" }).first()).toBeVisible();
-  await expect(page.getByRole("link", { name: "Download résumé" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "View résumé" })).toBeVisible();
   await expect(page.getByRole("region", { name: "Quick proof" })).toBeVisible();
 });
 
@@ -63,7 +63,8 @@ test("recruiter mode exposes profile facts and contact links", async ({ page }) 
   await expect(page.getByRole("link", { name: /Email/i })).toBeVisible();
   await expect(page.getByRole("link", { name: /LinkedIn/i }).first()).toBeVisible();
   await expect(page.getByRole("link", { name: /GitHub/i }).first()).toBeVisible();
-  await expect(page.getByRole("link", { name: /Download résumé/i }).first()).toBeVisible();
+  await expect(page.getByRole("link", { name: /View résumé/i }).first()).toBeVisible();
+  await expect(page.getByRole("link", { name: /HTML résumé/i })).toBeVisible();
 });
 
 test("smartRisk case study renders full structure without invented metrics", async ({
@@ -197,4 +198,12 @@ test("toolbox page catalogues tools by category", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Data visualization" })).toBeVisible();
   await expect(page.getByRole("link", { name: /^React/ }).first()).toBeVisible();
   await expect(page.getByRole("link", { name: /^amCharts/ }).first()).toBeVisible();
+});
+
+test("kind words stays empty until approved testimonials exist", async ({ page }) => {
+  await page.goto("/kind-words");
+
+  await expect(page.getByRole("heading", { name: "Kind words" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "No approved quotes yet" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Open Recruiter Mode" })).toBeVisible();
 });

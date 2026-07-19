@@ -1,11 +1,10 @@
-import fs from "node:fs";
-import path from "node:path";
 import { Button } from "@/components/ui/button";
 import { Callout } from "@/components/ui/callout";
 import { PageHeader } from "@/components/ui/page-header";
 import { StatusLabel } from "@/components/ui/status-label";
 import { resumeContent } from "@/content/data/resume";
 import { siteProfile } from "@/content/data/site";
+import { hasResumePdf } from "@/lib/content/resume-pdf";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata = buildMetadata({
@@ -15,13 +14,8 @@ export const metadata = buildMetadata({
   path: "/resume",
 });
 
-function pdfExists(pdfPath: string) {
-  const relative = pdfPath.replace(/^\//, "");
-  return fs.existsSync(path.join(process.cwd(), "public", relative));
-}
-
 export default function ResumePage() {
-  const hasPdf = resumeContent.pdfAvailable || pdfExists(resumeContent.pdfPath);
+  const hasPdf = hasResumePdf();
 
   return (
     <div className="resume-page flex flex-col gap-10">

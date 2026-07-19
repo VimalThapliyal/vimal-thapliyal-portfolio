@@ -4,7 +4,9 @@ import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/ui/page-header";
 import { StatusLabel } from "@/components/ui/status-label";
 import { recruiterContent } from "@/content/data/recruiter";
+import { resumeContent } from "@/content/data/resume";
 import { siteProfile } from "@/content/data/site";
+import { hasResumePdf } from "@/lib/content/resume-pdf";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
@@ -16,6 +18,7 @@ export const metadata: Metadata = buildMetadata({
 
 export default function RecruiterPage() {
   const { snapshot } = recruiterContent;
+  const hasPdf = hasResumePdf();
 
   return (
     <div className="recruiter-page flex flex-col gap-10">
@@ -27,11 +30,13 @@ export default function RecruiterPage() {
         status={<StatusLabel label={snapshot.availability} />}
         actions={
           <>
-            <Button href={siteProfile.resumePdfUrl} variant="primary">
-              Download résumé
-            </Button>
-            <Button href="/resume" variant="secondary">
-              HTML résumé
+            {hasPdf ? (
+              <Button href={resumeContent.pdfPath} variant="primary">
+                Download résumé
+              </Button>
+            ) : null}
+            <Button href="/resume" variant={hasPdf ? "secondary" : "primary"}>
+              View résumé
             </Button>
             <Button href="/contact" variant="ghost">
               Contact
@@ -230,11 +235,13 @@ export default function RecruiterPage() {
           </li>
           <li>
             <Link
-              href={siteProfile.resumePdfUrl}
+              href={hasPdf ? resumeContent.pdfPath : "/resume"}
               className="flex min-h-12 items-center justify-between border border-border bg-surface px-4 no-underline hover:border-accent/40"
             >
-              <span>Résumé PDF</span>
-              <span className="font-mono text-[length:var(--text-small)] text-accent">Download →</span>
+              <span>{hasPdf ? "Résumé PDF" : "HTML résumé"}</span>
+              <span className="font-mono text-[length:var(--text-small)] text-accent">
+                {hasPdf ? "Download →" : "Open →"}
+              </span>
             </Link>
           </li>
         </ul>

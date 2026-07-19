@@ -24,6 +24,8 @@ npm run build
 npm run test:e2e
 ```
 
+Accessibility checks use `@axe-core/playwright` (WCAG 2.2 AA tags) in `e2e/a11y.spec.ts`.
+
 Or run the bundled CI script (lint, typecheck, unit tests, build):
 
 ```bash
@@ -102,4 +104,6 @@ Until that variable is set, `/contact` shows email fallback only.
 - Privacy page: complete
 - Now page: complete
 - Toolbox page: complete
-- Remaining: Kind Words (only with approved quotes)
+- Kind Words: intentional empty state (no invented quotes)
+- Pre-launch audit: fixes for broken PDF CTAs + axe coverage started
+- Remaining: real résumé PDF asset; first published article; approved testimonials
