@@ -87,6 +87,18 @@ NEXT_PUBLIC_FORMSPREE_FORM_ID=your-form-id
 
 Until that variable is set, `/contact` shows email fallback only.
 
+## Résumé PDF
+
+Generate a print-quality PDF from the live HTML `/resume` page (Playwright + print CSS):
+
+```bash
+npm run build
+npm run resume:pdf
+```
+
+Output: `public/resume/Vimal_Thapliyal_Senior_Frontend_Technical_Lead.pdf`  
+Download buttons unlock automatically when that file exists and is non-empty.
+
 ## Phase status
 
 - Phase 1 (bootstrap + tooling): complete
@@ -99,11 +111,12 @@ Until that variable is set, `/contact` shows email fallback only.
 - Four published case studies: complete
 - Contact form + Vercel Analytics/Speed Insights: complete
 - SEO basics (sitemap, robots, OG, JSON-LD): complete
-- HTML résumé page: complete (PDF asset pending)
+- HTML résumé page: complete
+- Résumé PDF export script + asset: complete
 - About page: complete
 - Privacy page: complete
 - Now page: complete
 - Toolbox page: complete
 - Kind Words: intentional empty state (no invented quotes)
 - Pre-launch audit: fixes for broken PDF CTAs + axe coverage started
-- Remaining: real résumé PDF asset; first published article; approved testimonials
+- Remaining: first published article; approved testimonials

@@ -10,8 +10,8 @@ export const homeContent = {
     primaryCta: { label: "View selected work", href: "/work" },
     secondaryCta: { label: "Recruiter Mode", href: "/recruiter" },
     utilityCta: {
-      label: "View résumé",
-      href: "/resume",
+      label: "Download résumé",
+      href: "/resume/Vimal_Thapliyal_Senior_Frontend_Technical_Lead.pdf",
     },
   },
   proofSignals: [

@@ -179,12 +179,16 @@ html[data-theme="dark"] {
     --text: #11161d;
     --text-muted: #333941;
     --border: #cccccc;
-    --accent: #007f73;
+    --accent: #005f56;
+    --font-sans: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman",
+      serif;
+    --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
   }
 
   body {
     background: white !important;
     color: black !important;
+    font-family: var(--font-sans) !important;
   }
 
   .print\:hidden,
@@ -205,6 +209,11 @@ html[data-theme="dark"] {
     font-family: var(--font-mono);
     font-size: 0.75rem;
     color: #59616a;
+  }
+
+  /* Keep the printed CV dense — omit expanded URLs on résumé project links. */
+  .resume-page a[href^="/"]::after {
+    content: none;
   }
 
   aside,
