@@ -1,0 +1,31 @@
+---
+description: Rules for building Vimal Thapliyal's portfolio
+globs:
+  - "src/**/*"
+  - "content/**/*"
+  - "tests/**/*"
+alwaysApply: true
+---
+
+# Portfolio project rules
+
+- Read `README_FIRST.md`, `AGENTS.md`, and relevant PRDs before implementation.
+- Do not copy Adam Durrant's exact code, assets, measurements, branding, or copy.
+- Use latest stable Next.js App Router and TypeScript.
+- Prefer server components.
+- Do not make an entire route tree client-rendered.
+- Use local MDX and typed data; no database for MVP.
+- Do not add paid services.
+- Do not invent professional claims, metrics, dates, or testimonials.
+- Treat employer and client information as confidential unless explicitly approved.
+- Use semantic HTML and target WCAG 2.2 AA.
+- Respect reduced motion.
+- Maintain visible focus styles.
+- Ensure reflow at 320px.
+- Keep teal as a restrained accent.
+- Avoid purple gradients, glassmorphism, floating blobs, excessive rounded cards, fake terminals, typewriter effects, animated skill bars, random pills, and decorative stock photos.
+- Keep dependencies minimal and explain every new package.
+- Store content outside reusable components.
+- Validate content at build time.
+- Run lint, type-check, relevant tests, and production build before declaring completion.
+- Return exact files changed, tests run, failures, and unresolved risks.

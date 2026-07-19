@@ -1,0 +1,169 @@
+---
+title: "UI Component Library & Design System"
+slug: "ui-component-library"
+summary: "A shared frontend foundation for reducing inconsistent implementation, modernizing Bootstrap patterns, aligning brand tokens, and improving delivery across screens and teams."
+status: "published"
+featured: true
+projectType: "Design system"
+role: "Technical Lead — UI / Frontend"
+yearLabel: "Multi-year"
+confidentiality: "anonymized"
+technologies:
+  - "React"
+  - "TypeScript"
+  - "JavaScript"
+  - "Bootstrap"
+  - "CSS"
+capabilities:
+  - "Design systems"
+  - "Modernization"
+  - "Accessibility"
+seo:
+  title: "UI component library case study — Vimal Thapliyal"
+  description: "Case study of a shared UI component library and design-system foundation: tokens, standards, accessibility, documentation, and adoption."
+cover:
+  src: "/images/work/ui-component-library-cover.svg"
+  alt: "Anonymized diagram of a component inventory with tokens, controls, and composition blocks"
+relatedProjectSlugs:
+  - "enterprise-analytics-dashboard"
+  - "smartrisk-risk-intelligence"
+relatedArticleSlugs: []
+---
+
+## Context
+
+This work focused on a shared frontend foundation: a UI component library and design-system approach intended to reduce inconsistent implementation, modernize Bootstrap-era patterns, align brand tokens, and improve delivery across screens and teams.
+
+Some product details and visuals on this page are anonymized to protect client and employer information. The decisions and responsibilities described are accurate to the work performed.
+
+## Problem
+
+Without a shared UI foundation, teams repeatedly solved the same interface problems with slight variations. That created:
+
+- Visual and interaction inconsistency
+- Slower delivery on common screens
+- Harder reviews because “close enough” differed by person
+- Accessibility and responsive gaps that reappeared project after project
+
+## Users and jobs to be done
+
+Primary consumers included:
+
+- Product engineers implementing screens quickly and consistently
+- Design and frontend collaborators aligning tokens and behavior
+- Reviewers evaluating quality against shared expectations
+- Users who benefit indirectly through more coherent product UI
+
+Jobs to be done:
+
+- Find a trusted component before inventing another
+- Apply brand tokens without hardcoded one-offs
+- Understand usage through documentation and examples
+- Extend the system without collapsing standards
+
+## Constraints
+
+- Existing Bootstrap patterns and product screens already in production
+- Need for incremental adoption rather than freeze-the-world migration
+- Cross-team ownership and review habits
+- Accessibility expectations that must travel with components
+- Documentation that remains useful under delivery pressure
+
+## Personal role and ownership
+
+Ownership included:
+
+- Defining reusable component and token direction
+- Guiding modernization away from one-off Bootstrap usage where shared patterns fit
+- Reviewing consistency, accessibility, and API clarity
+- Supporting adoption through clarity, not just repository existence
+- Hands-on implementation of foundational pieces when needed
+
+## Discovery and requirement shaping
+
+Useful early questions:
+
+- Which patterns are repeated enough to earn reuse?
+- Where should tokens own decisions versus component APIs?
+- What documentation format will engineers actually open?
+- How should deprecation and migration guidance work?
+
+## Information architecture
+
+The system needed clear layers:
+
+- Tokens and foundations
+- Primitive controls
+- Composed patterns
+- Usage guidance and examples
+
+Without that layering, “component library” becomes a junk drawer.
+
+## UI and interaction decisions
+
+Principles:
+
+- Prefer a smaller trusted set over a large inconsistent catalog
+- Encode accessibility into defaults wherever possible
+- Keep APIs boring and predictable
+- Make visual states (hover, focus, disabled, error) first-class
+- Document when not to use a component as carefully as when to use it
+
+## Technical architecture
+
+The foundation combined React and TypeScript components with shared CSS/token alignment and a modernization path for Bootstrap-heavy interfaces. Technical judgment favored adoption and consistency over speculative abstraction.
+
+## Reusable component strategy
+
+Reuse was intentional:
+
+- Extract only after repetition was proven
+- Keep component APIs stable enough for multi-team use
+- Pair visual changes with clear migration notes
+- Treat composition patterns as part of the system, not side documentation
+
+## Accessibility
+
+Accessibility goals for the system:
+
+- Keyboard operability as a default expectation
+- Focus visibility built into components
+- Accessible names and semantics for controls
+- Contrast-aware token choices
+- Reduced need for every feature team to rediscover a11y basics
+
+## Performance
+
+Shared UI can improve or hurt performance. The focus was:
+
+- Avoid unnecessarily heavy abstractions
+- Keep common controls lean
+- Prevent CSS and component growth from becoming unreviewable sprawl
+
+## Testing and release process
+
+Quality relied on:
+
+- Component-level review standards
+- Example-driven documentation
+- Adoption feedback from implementing teams
+- Progressive migration rather than untested mass replacement
+
+## Outcome
+
+Verified quantitative metrics are not published here.
+
+Qualitative / process outcomes:
+
+- Shared frontend foundation for common UI patterns
+- Clearer token and component direction across screens
+- Reduced incentive to reinvent repeated interface behavior
+- Stronger accessibility and consistency baseline for later product work
+
+## Lessons
+
+1. A design system fails if adoption is optional and guidance is vague.
+2. Tokens only help when teams stop hardcoding around them.
+3. Accessibility defaults beat repeated accessibility reminders.
+4. Migration paths matter as much as the new components.
+5. The best system is trusted enough that building another button feels wrong.

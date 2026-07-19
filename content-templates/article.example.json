@@ -1,0 +1,22 @@
+{
+  "title": "Article title",
+  "slug": "article-slug",
+  "summary": "A specific summary.",
+  "status": "draft",
+  "publishedAt": "2026-07-19",
+  "updatedAt": "2026-07-19",
+  "category": "Frontend Architecture",
+  "tags": [
+    "React",
+    "TypeScript"
+  ],
+  "featured": false,
+  "seo": {
+    "title": "Article title \u2014 Vimal Thapliyal",
+    "description": "Accurate search description."
+  },
+  "cover": {
+    "src": "/images/writing/article-slug.webp",
+    "alt": "Descriptive alt text."
+  }
+}

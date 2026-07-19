@@ -1,0 +1,151 @@
+---
+title: "Amplifi PRO — Procurement Intelligence Platform"
+slug: "amplifi-pro-procurement-intelligence"
+summary: "Modern React interfaces introduced into an established enterprise procurement-intelligence product to support richer workflows and configurable dashboards."
+status: "published"
+featured: true
+projectType: "Enterprise product"
+role: "Technical Lead — UI / Frontend"
+company: "The Smart Cube / WNS"
+yearLabel: "Multi-year"
+confidentiality: "anonymized"
+technologies:
+  - "React"
+  - "TypeScript"
+  - "JavaScript"
+  - "Bootstrap"
+  - "REST APIs"
+capabilities:
+  - "Dashboards"
+  - "Data visualization"
+  - "Modernization"
+  - "Enterprise product"
+seo:
+  title: "Amplifi PRO case study — Vimal Thapliyal"
+  description: "Case study of React modernization for an enterprise procurement-intelligence platform: workflows, widgets, UAT, and maintainability."
+cover:
+  src: "/images/work/amplifi-pro-cover.svg"
+  alt: "Anonymized diagram of a procurement intelligence interface with filters and modular panels"
+relatedProjectSlugs:
+  - "smartrisk-risk-intelligence"
+  - "enterprise-analytics-dashboard"
+relatedArticleSlugs: []
+---
+
+## Context
+
+Amplifi PRO is an enterprise procurement-intelligence platform. The product already had depth; the frontend challenge was to introduce modern React interfaces into an established environment without breaking delivery speed or product trust.
+
+Some product details and visuals on this page are anonymized to protect client and employer information. The decisions and responsibilities described are accurate to the work performed.
+
+## Problem
+
+Legacy UI patterns made richer workflows and configurable dashboards harder to evolve. Teams needed a frontend approach that could:
+
+- Fit into an existing product and delivery model
+- Support denser procurement intelligence workflows
+- Increase consistency across configurable dashboard surfaces
+- Remain maintainable after the first modernization wave
+
+## Users and jobs to be done
+
+Users needed to:
+
+- Investigate procurement signals and related context
+- Configure dashboard views for different operational priorities
+- Move between overview and drill-down without losing orientation
+- Trust that updated interfaces still matched established product behavior
+
+## Constraints
+
+- Established product environment that could not pause for a full rewrite
+- Coexistence of older and newer UI patterns during transition
+- Cross-functional dependencies across design, backend, QA, and BA
+- Confidentiality limits on screenshots and customer-specific data
+- Need for configurable dashboard behavior without unbounded one-off code
+
+## Personal role and ownership
+
+As Technical Lead for UI / Frontend, ownership included:
+
+- Helping modern React UI patterns land inside an established product
+- Shaping reusable dashboard and workflow components
+- Clarifying requirements and edge cases with product partners
+- Reviewing consistency, accessibility, and maintainability
+- Hands-on implementation where the problem was high-leverage
+
+## Discovery and requirement shaping
+
+Before expanding modernization, the team needed clarity on:
+
+- Which workflows justified reusable modules versus local solutions
+- How configuration should behave for different dashboard consumers
+- Which legacy patterns could remain temporarily without blocking progress
+- What “done” meant for UAT in a mixed UI environment
+
+## Information architecture
+
+The experience needed a stable model for:
+
+- Procurement investigation flows
+- Configurable dashboard composition
+- Persistent context during drill-downs
+- Predictable navigation between monitoring and action
+
+## UI and interaction decisions
+
+Key principles:
+
+- Prefer progressive modernization over big-bang replacement
+- Keep dashboard modules composable and reviewable
+- Make configuration understandable, not merely powerful
+- Preserve familiar product orientation while improving clarity
+- Handle empty, loading, and partial data states as first-class UI
+
+## Technical architecture
+
+The frontend approach used React and TypeScript within the existing enterprise application boundary, integrating with REST-backed data flows and shared UI patterns. The goal was not novelty; it was a more maintainable foundation for denser product behavior.
+
+## Reusable component strategy
+
+Reusable widgets and workflow components reduced duplication as new surfaces appeared. Where configuration was required, component contracts and review standards mattered as much as visual polish.
+
+## Accessibility
+
+Accessibility stayed part of delivery:
+
+- Keyboard paths for primary operations
+- Semantic structure for dense content regions
+- Visible focus and contrast-conscious accents
+- Understandable states when data is incomplete
+
+## Performance
+
+Performance work focused on practical risks:
+
+- Configurable dashboards that remain responsive under realistic data
+- Avoiding unnecessary render churn in composite widget layouts
+- Keeping modernization from introducing interaction lag
+
+## Testing and release process
+
+Cross-functional UAT, reviews, and attention to migration edge cases were essential. Mixed old/new UI environments fail in subtle ways; release confidence depended on checking those seams deliberately.
+
+## Outcome
+
+Verified quantitative metrics are not published here.
+
+Qualitative / process outcomes:
+
+- Modern React UI patterns introduced into an established product environment
+- Stronger foundation for configurable dashboards and richer workflows
+- Improved maintainability and reviewability of UI modules
+- Better alignment between product workflows and frontend implementation
+
+## Lessons
+
+1. Modernization succeeds when it respects the product that already exists.
+2. Configurable UI needs contracts, not just visual components.
+3. UAT around migration seams matters more than greenfield demos.
+4. Maintainability is a delivery outcome, not a later refactor wish.
+5. Confidentiality can limit screenshots without limiting useful engineering narrative.

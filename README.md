@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vimal Thapliyal Portfolio
 
-## Getting Started
+Personal portfolio, case-study site, and recruiter conversion experience.
 
-First, run the development server:
+**Start here:** [README_FIRST.md](./README_FIRST.md)
+
+## Quick start
 
 ```bash
+cp .env.example .env.local
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Quality checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run typecheck
+npm run test
+npm run build
+npm run test:e2e
+```
 
-## Learn More
+Or run the bundled CI script (lint, typecheck, unit tests, build):
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run ci
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Content workflow
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Case studies live in `src/content/work/*.mdx`.  
+Articles live in `src/content/writing/*.mdx`.
 
-## Deploy on Vercel
+1. Copy an existing file or start from `content-templates/`.
+2. Fill YAML frontmatter (`status: draft` until ready).
+3. Keep the filename equal to the `slug`.
+4. Run:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run content:validate
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Drafts are excluded from production. To preview drafts locally:
+
+```bash
+# in .env.local
+SHOW_DRAFTS=true
+npm run dev
+```
+
+## New packages
+
+| Package | Why |
+|---|---|
+| `zod` | Validate environment variables and content frontmatter |
+| `vitest` | Unit tests |
+| `@vitejs/plugin-react` | React support in Vitest |
+| `jsdom` | DOM environment for component tests |
+| `@testing-library/*` | Accessible component testing utilities |
+| `@playwright/test` | End-to-end smoke tests |
+| `next-themes` | Light / dark / system theme without flash |
+| `clsx` | Conditional class composition for UI primitives |
+| `gray-matter` | Parse MDX frontmatter at build time |
+| `next-mdx-remote` | Render local MDX bodies in server components |
+| `remark-gfm` | GitHub-flavored markdown in articles/case studies |
+| `tsx` | Run the TypeScript content validation script |
+| `@vercel/analytics` | Free Hobby page analytics |
+| `@vercel/speed-insights` | Free Hobby performance insights |
+
+## Contact form setup
+
+1. Create a free form at [Formspree](https://formspree.io/).
+2. Copy the form id into `.env.local`:
+
+```bash
+NEXT_PUBLIC_FORMSPREE_FORM_ID=your-form-id
+```
+
+3. Restart `npm run dev`.
+
+Until that variable is set, `/contact` shows email fallback only.
+
+## Phase status
+
+- Phase 1 (bootstrap + tooling): complete
+- Phase 2 (design tokens + shell): complete
+- Phase 3 (core UI primitives): complete
+- Phase 4 (content engine): complete
+- Phase 5 (homepage): complete
+- Recruiter Mode: complete
+- First full case study (SmartRisk): complete
+- Four published case studies: complete
+- Contact form + Vercel Analytics/Speed Insights: complete
+- SEO basics (sitemap, robots, OG, JSON-LD): complete
+- Remaining polish / resume PDF asset — not started

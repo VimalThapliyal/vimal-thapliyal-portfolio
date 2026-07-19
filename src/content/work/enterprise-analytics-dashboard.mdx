@@ -1,0 +1,152 @@
+---
+title: "Enterprise Analytics Dashboard"
+slug: "enterprise-analytics-dashboard"
+summary: "A configurable analytics dashboard built from reusable widgets, filtering, search, pagination, visualization, and nested layout behavior for complex data use cases."
+status: "published"
+featured: true
+projectType: "Enterprise product"
+role: "Technical Lead — UI / Frontend"
+yearLabel: "Multi-year"
+confidentiality: "anonymized"
+technologies:
+  - "React"
+  - "TypeScript"
+  - "JavaScript"
+  - "GridStack"
+  - "amCharts"
+  - "REST APIs"
+capabilities:
+  - "Dashboards"
+  - "Data visualization"
+  - "Enterprise product"
+seo:
+  title: "Enterprise analytics dashboard case study — Vimal Thapliyal"
+  description: "Case study of a configurable analytics dashboard: reusable widgets, GridStack layout behavior, amCharts visualization, and frontend architecture judgment."
+cover:
+  src: "/images/work/enterprise-analytics-cover.svg"
+  alt: "Anonymized diagram of an analytics dashboard with chart and table composition regions"
+relatedProjectSlugs:
+  - "amplifi-pro-procurement-intelligence"
+  - "ui-component-library"
+relatedArticleSlugs: []
+---
+
+## Context
+
+This engagement centered on a configurable enterprise analytics dashboard where users assemble and navigate dense operational views. The interface had to support composition, filtering, search, pagination, visualization, and nested layout behavior without collapsing into brittle page-specific code.
+
+Some product details and visuals on this page are anonymized to protect client and employer information. The decisions and responsibilities described are accurate to the work performed.
+
+## Problem
+
+Analytics products fail when every new view becomes a special case. The team needed a dashboard system that could:
+
+- Compose reusable widgets into meaningful layouts
+- Support dense filtering and search without hiding state
+- Keep visualization usable inside nested layout behavior
+- Remain understandable for both end users and implementing engineers
+
+## Users and jobs to be done
+
+Users needed to:
+
+- Build and adjust dashboard layouts for their analytical tasks
+- Filter and search across dense datasets
+- Interpret charts and tabular results together
+- Recover gracefully when a widget or data source is empty or delayed
+
+## Constraints
+
+- Complex layout behavior in a nested dashboard environment
+- Visualization and widget composition requirements
+- Performance sensitivity under realistic data volume
+- Accessibility and keyboard expectations for dense UI
+- Confidentiality limits on customer-specific datasets and screenshots
+
+## Personal role and ownership
+
+Ownership included:
+
+- Frontend architecture and interaction structure for configurable dashboards
+- Widget composition and state considerations
+- Collaboration around visualization and layout behavior
+- Reviews for edge cases, responsiveness, and consistency
+- Hands-on work on high-complexity UI paths
+
+## Discovery and requirement shaping
+
+Key questions early:
+
+- Which layout behaviors are product requirements versus temporary convenience?
+- What widget contracts make composition safe?
+- How should filters, search, and pagination present active state?
+- Which empty and loading scenarios are common enough to standardize?
+
+## Information architecture
+
+The dashboard needed clear hierarchy among:
+
+- Layout composition
+- Widget content
+- Filter and search controls
+- Drill-down and return paths
+
+Without that hierarchy, power-user density quickly turns into noise.
+
+## UI and interaction decisions
+
+Principles that guided the experience:
+
+- Make composition power available without making the default view chaotic
+- Keep filter and search state visible
+- Pair charts with enough context to interpret them
+- Preserve orientation inside nested layout interactions
+- Prefer shared patterns for repeated dashboard chrome
+
+## Technical architecture
+
+The frontend combined React and TypeScript with GridStack-driven layout behavior and amCharts visualization inside a REST-integrated analytics environment. Architecture work focused on state boundaries, widget contracts, and predictable composition rather than presentation-only polish.
+
+## Reusable component strategy
+
+Reusable widgets and shared dashboard chrome reduced one-off page growth. Contracts around props, loading states, and empty states mattered because composition multiplies inconsistencies quickly.
+
+## Accessibility
+
+Accessibility priorities for dense dashboards:
+
+- Keyboard reachability for primary controls
+- Meaningful structure for widget regions
+- Focus visibility across nested interactive surfaces
+- State communication when charts or tables are loading or empty
+
+## Performance
+
+Performance risks were treated as product risks:
+
+- Render cost of multiple widgets and charts
+- Interaction responsiveness during filtering and layout changes
+- Avoiding unnecessary updates across the composition tree
+
+## Testing and release process
+
+Testing emphasized composition edge cases: empty widgets, slow data, layout nesting, and filter combinations that demos often skip. Reviews looked for shared-pattern violations as early signals of future debt.
+
+## Outcome
+
+Verified quantitative metrics are not published here.
+
+Qualitative / process outcomes:
+
+- Configurable dashboard model built around reusable widgets
+- Clearer frontend structure for filtering, search, pagination, and visualization
+- Stronger handling of nested layout and composition edge cases
+- Better basis for extending analytics views without starting from scratch
+
+## Lessons
+
+1. Composition systems need contracts more than they need decorative widgets.
+2. Dashboard power features must keep active state visible.
+3. Nested layouts create accessibility and performance edge cases early.
+4. Visualization quality depends on surrounding UI context, not the chart alone.
+5. The hardest bugs live at the seams between widgets, filters, and data timing.

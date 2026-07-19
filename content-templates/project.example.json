@@ -1,0 +1,28 @@
+{
+  "title": "Project title",
+  "slug": "project-slug",
+  "summary": "Outcome-led summary between 30 and 240 characters.",
+  "status": "draft",
+  "featured": false,
+  "projectType": "Enterprise product",
+  "role": "Technical Lead \u2014 UI / Frontend",
+  "company": "Company name or anonymized",
+  "yearLabel": "YYYY\u2013YYYY",
+  "confidentiality": "anonymized",
+  "technologies": [
+    "React",
+    "TypeScript"
+  ],
+  "capabilities": [
+    "Dashboards",
+    "Design systems"
+  ],
+  "seo": {
+    "title": "Project title case study \u2014 Vimal Thapliyal",
+    "description": "Accurate search description."
+  },
+  "cover": {
+    "src": "/images/work/project-slug.webp",
+    "alt": "Describe the useful information in the visual."
+  }
+}

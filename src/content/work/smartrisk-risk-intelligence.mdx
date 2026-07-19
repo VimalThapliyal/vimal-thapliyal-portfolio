@@ -1,0 +1,151 @@
+---
+title: "SmartRisk — Risk Intelligence Platform"
+slug: "smartrisk-risk-intelligence"
+summary: "A risk-intelligence product shaped for complex monitoring workflows, reusable dashboard modules, and clearer paths from signal to action."
+status: "published"
+featured: true
+projectType: "Enterprise product"
+role: "Technical Lead — UI / Frontend"
+company: "The Smart Cube / WNS"
+yearLabel: "Multi-year"
+confidentiality: "anonymized"
+technologies:
+  - "React"
+  - "TypeScript"
+  - "JavaScript"
+  - "Bootstrap"
+  - "REST APIs"
+capabilities:
+  - "Dashboards"
+  - "Data visualization"
+  - "Design systems"
+  - "Enterprise product"
+seo:
+  title: "SmartRisk case study — Vimal Thapliyal"
+  description: "Case study of frontend leadership on a risk-intelligence platform: navigation, reusable dashboard modules, accessibility, and delivery judgment."
+cover:
+  src: "/images/work/smartrisk-cover.svg"
+  alt: "Anonymized diagram of a risk intelligence dashboard layout with navigation rail and modular widgets"
+relatedProjectSlugs:
+  - "amplifi-pro-procurement-intelligence"
+  - "enterprise-analytics-dashboard"
+  - "ui-component-library"
+relatedArticleSlugs: []
+---
+
+## Context
+
+SmartRisk is a risk-intelligence product where users need to move through dense operational information, monitor signals, and take action without losing context.
+
+Some product details and visuals on this page are anonymized to protect client and employer information. The decisions and responsibilities described are accurate to the work performed.
+
+## Problem
+
+Risk workflows stacked navigation, monitoring, and follow-up actions into one interface. Without a clear structure, users had to reconstruct context on every return visit, and the frontend risked becoming a collection of one-off screens rather than a coherent system.
+
+## Users and jobs to be done
+
+Primary users needed to:
+
+- Scan for meaningful risk signals quickly
+- Move between overview and detail without losing orientation
+- Act on items with confidence that related context remained available
+- Trust that repeated workflows behaved consistently across screens
+
+## Constraints
+
+- Enterprise product constraints and established delivery process
+- Mixed UI history that could not be replaced in a single rewrite
+- Confidentiality limits on screenshots and customer-specific data
+- Need for reusable patterns across related dashboard surfaces
+- Cross-functional dependencies with design, backend, QA, and business analysis
+
+## Personal role and ownership
+
+As Technical Lead for UI / Frontend, ownership included:
+
+- Shaping frontend approach for dense monitoring experiences
+- Guiding reusable component and widget patterns
+- Collaborating on requirement clarity before implementation
+- Reviewing interface quality for consistency, accessibility, and edge cases
+- Hands-on implementation on high-leverage UI problems
+
+## Discovery and requirement shaping
+
+Work started from workflow understanding rather than screen decoration. That meant clarifying:
+
+- States and transitions users actually move through
+- Which information must remain persistent versus progressive
+- Where reuse was already proven versus where uniqueness was required
+- How empty, loading, error, and partial-data states should behave
+
+## Information architecture
+
+Navigation and hierarchy were treated as product decisions. The interface needed:
+
+- A stable orientation model for recurring tasks
+- Clear separation between monitoring, investigation, and action
+- Room for modular content blocks without visual collapse
+- Predictable return paths after drill-downs
+
+## UI and interaction decisions
+
+Key interaction principles:
+
+- Prioritize scannability over decorative density
+- Keep related actions close to the content they affect
+- Prefer reusable module boundaries over page-unique layouts
+- Make hierarchy visible through spacing and structure, not only color
+- Preserve keyboard-reachable paths for core actions
+
+## Technical architecture
+
+The frontend work centered on a React-based enterprise UI with shared components, REST-integrated data flows, and modular dashboard composition. Technical choices emphasized maintainability and consistency across repeated product surfaces rather than introducing novelty for its own sake.
+
+## Reusable component strategy
+
+Where repetition was proven, patterns were extracted into reusable UI building blocks and dashboard modules. That reduced inconsistent implementation, made reviews more objective, and gave later screens a clearer starting point.
+
+## Accessibility
+
+Accessibility was treated as part of delivery, not a late polish pass:
+
+- Semantic structure for major regions and headings
+- Keyboard operability for primary navigation and actions
+- Visible focus states
+- Contrast-conscious accents rather than color-only meaning
+- Careful handling of loading and empty states so assistive tech users still understand page status
+
+## Performance
+
+Performance attention focused on practical risks for dashboard-heavy UI:
+
+- Avoid unnecessary re-rendering in dense widget compositions
+- Keep interactions responsive under realistic data volume
+- Prefer incremental improvement over speculative optimization theater
+- Validate that visual complexity did not become interaction latency
+
+## Testing and release process
+
+Quality practices included structured reviews, cross-functional UAT collaboration, and attention to edge cases that appear only after real workflows leave the mockup stage. Release confidence came from predictable component behavior as much as from page-level checks.
+
+## Outcome
+
+Verified quantitative metrics are not published here.
+
+Qualitative / process outcomes:
+
+- Clearer structure for navigating complex risk information
+- Stronger reusable dashboard and component patterns
+- Better alignment between product requirements and frontend implementation
+- Improved basis for consistent delivery across related screens
+
+If stronger numeric outcomes are approved for public use later, they can be added without changing the case-study structure.
+
+## Lessons
+
+1. Dense products get easier when navigation and state models are decided early.
+2. Reuse pays off only after repetition is proven in real workflows.
+3. Accessibility and empty states are part of the product, not optional finishing.
+4. Frontend leadership means clarifying ownership and trade-offs while still shipping.
+5. Confidentiality does not prevent explaining decisions; it only limits what visuals can show.
